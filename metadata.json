@@ -1,0 +1,6 @@
+{
+  "name": "Nossa História",
+  "description": "Uma linda viagem interativa e emocionante sobre a nossa história, repleta de memórias e sonhos para o futuro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
