@@ -5,15 +5,15 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function RelationshipCounter() {
   const [timePassed, setTimePassed] = useState({
-    years: 0,
-    months: 0,
-    days: 0,
-    totalDays: 0,
+    years: 1,
+    months: 5,
+    days: 10,
+    totalDays: 520,
     seconds: 0,
   });
 
   // Default start date: 10 de Fevereiro de 2024
-  const startRelationDate = "2024-02-10T00:00:00";
+  const startRelationDate = "2025-01-08T00:00:00";
 
   useEffect(() => {
     const calculateTime = () => {
@@ -63,7 +63,7 @@ export default function RelationshipCounter() {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-rose/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        
+
         {/* Header decoration */}
         <AnimatedSection direction="down" className="inline-flex items-center gap-1.5 text-brand-rose mb-4">
           <Heart size={14} className="fill-current text-brand-rose animate-pulse" />
@@ -137,7 +137,7 @@ export default function RelationshipCounter() {
         {/* Emotion End Quote */}
         <AnimatedSection direction="up" delay={0.7} className="mt-4">
           <p className="font-serif text-lg sm:text-2xl text-brand-charcoal italic max-w-xl mx-auto leading-relaxed">
-            "E ainda sinto que estamos apenas no começo."
+            "E ainda tem muito tempo ao seu lado, até nois ficar veio e falando 'suqui'"
           </p>
           <div className="w-8 h-[1px] bg-brand-rose/40 mx-auto mt-6" />
         </AnimatedSection>

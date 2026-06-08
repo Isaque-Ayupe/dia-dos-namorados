@@ -33,7 +33,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
       {/* Header Signature */}
       <div className="w-full max-w-5xl flex justify-between items-center z-10 border-b border-brand-sand/50 pb-4">
         <span className="font-serif text-xs tracking-[0.2em] text-brand-taupe uppercase font-semibold">
-          Nossa História
+          UM POUCO DA NOSSA HISTÓRIA
         </span>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5 text-brand-rose">
@@ -69,7 +69,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
           />
           {/* Subtle label on the bottom corner of image */}
           <div className="absolute bottom-6 right-6 bg-white/95 backdrop-blur-xs px-3.5 py-1.5 rounded-full shadow-md text-[10px] uppercase tracking-widest font-mono text-brand-taupe border border-stone-100 z-10">
-            Nós dois • Vivendo Histórias
+            Nós dois • Juntinhos
           </div>
         </motion.div>
 
@@ -82,7 +82,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
             className="inline-flex items-center gap-2 px-3 py-1 bg-brand-darkbeige text-brand-rose text-[10px] font-bold uppercase tracking-widest rounded-full w-fit mx-auto lg:mx-0 mb-6"
           >
             <Sparkles size={12} className="text-brand-rose" />
-            Uma declaração para você
+            Uma Declaração pro meu mozão
           </motion.div>
 
           <motion.h1
@@ -93,11 +93,11 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
           >
             {userNickname ? (
               <>
-                Para <span className="text-brand-rose italic">{userNickname}</span>, a pessoa que transformou <span className="text-brand-rose italic">dias comuns</span> em memórias inesquecíveis.
+                Para meu <span className="text-brand-rose italic">{userNickname}</span>, a pessoa que transformou <span className="text-brand-rose italic">dias comuns</span> em memórias inesquecíveis.
               </>
             ) : (
               <>
-                Para a pessoa que transformou <span className="text-brand-rose italic">dias comuns</span> em memórias inesquecíveis.
+                Para a pessoa que transformou <span className="text-brand-rose italic">Dias paias</span> em momentos incríveis
               </>
             )}
           </motion.h1>
@@ -108,7 +108,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-[#5E5852] text-sm sm:text-base leading-relaxed max-w-md mx-auto lg:mx-0 mb-8 font-sans font-light"
           >
-            Uma pequena e romântica viagem pelas nossas melhores lembranças, conquistas e sentimentos. Feito com todo o carinho do meu coração para o seu.
+            Eu quis juntar minhas incriveis e <span className="text-brand-rose italic">(e humildes)</span> habilidades, pra trazer um pouco da nossa história. então pega o tiramitobas e simbora.
           </motion.p>
 
           <motion.div
@@ -124,7 +124,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
             >
               <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="flex items-center gap-2">
-                Começar a Jornada
+                Começar a incrivel expriência
                 <motion.span
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

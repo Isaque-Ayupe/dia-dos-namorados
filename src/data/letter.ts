@@ -15,7 +15,7 @@ export const letterData: DigitalLetter = {
     "Você transformou os meus dias comuns em uma poesia real e bonita. Obrigado(a) por ser meu cais seguro, meu porto e minha dupla favorita de todas as horas.",
     "Que possamos continuar escrevendo este livro juntos, página por página, com a certeza de que o melhor capítulo sempre será o próximo."
   ],
-  signature: "Com todo o carinho e o amor do mundo, para sempre seu/sua.",
-  date: "Dia dos Namorados",
+  signature: "Com todo o carinho e o amor do mundo, para sempre seu baby",
+  date: "Dia dos Namoridos",
   pS: "P.S.: Prepare-se, porque os nossos sonhos estão esperando para serem vividos!"
 };

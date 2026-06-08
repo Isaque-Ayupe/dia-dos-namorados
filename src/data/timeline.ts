@@ -9,10 +9,10 @@ export interface TimelineItem {
 export const timelineData: TimelineItem[] = [
   {
     id: "1",
-    date: "10 de Fevereiro de 2024",
+    date: "10 de outubro 2024",
     title: "O Começo de Tudo",
     image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop",
-    description: "Aquele primeiro café juntos, onde as horas pareceram minutos. Entre olhares tímidos e sorrisos bobos, percebemos que não seria apenas mais um encontro, mas o primeiro capítulo de algo extraordinário."
+    description: "A primeira vez que eu te mandei mensagem, depois de 2 semanas ensaiando e muito nervoso, criei coragem pra falar: 'É seu aniversário fia?'"
   },
   {
     id: "2",
@@ -23,17 +23,17 @@ export const timelineData: TimelineItem[] = [
   },
   {
     id: "3",
-    date: "12 de Junho de 2024",
+    date: "08 de janeiro de 2025",
     title: "O Nosso Pedido de Namoro",
     image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop",
-    description: "Uma noite fria e aconchegante, à luz de velas e música suave ao fundo. Fazer aquele pedido foi a decisão mais fácil e inspiradora da minha vida. Responder 'sim' uniu de vez as nossas trajetórias."
+    description: "Depois de 3 meses, uma conversa engraçada com seu pai e muita oração e amor, nosso início de fato como casal. Eu posso dizer com toda certeza que a cena de voce dizendo sim para mim (e nosso primeio kiss) é top 2 melhores dias da minha vida!!!"
   },
   {
     id: "4",
-    date: "07 de Setembro de 2024",
-    title: "Nossa Primeira Viagem Juntos",
+    date: "12 de Junho de 2025",
+    title: "Nosso Primeiro dia dos namoridos",
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop",
-    description: "A estrada aberta, o vento no rosto e as nossas músicas favoritas cantadas em uníssono. Ver o nascer do sol ao seu lado em outro lugar me fez entender que meu destino favorito é sempre você."
+    description: "Depois de uma vergonha na empresa e todo mundo do studio reis vendo um moço bonito na frente da empresa com um buque enorme, a gente teve nosso primeiro dia dos namoridos juntinhossssss, e caramba foi mucho legalll"
   },
   {
     id: "5",

@@ -7,24 +7,24 @@ export default function TimelineSection() {
   return (
     <section id="timeline" className="py-24 px-4 bg-brand-beige overflow-hidden select-none border-t border-brand-sand/35">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-20">
           <AnimatedSection direction="down" className="inline-flex items-center gap-1.5 text-brand-rose mb-3">
             <Heart size={14} className="fill-current animate-pulse" />
             <span className="font-serif italic text-sm tracking-wider">A Nossa Jornada</span>
           </AnimatedSection>
-          
+
           <AnimatedSection direction="up" delay={0.2}>
             <h2 className="font-serif text-3xl md:text-5xl text-brand-charcoal tracking-tight leading-tight">
               A Linha do Nosso Tempo
             </h2>
             <div className="w-12 h-[2px] bg-brand-rose mx-auto mt-6" />
           </AnimatedSection>
-          
+
           <AnimatedSection direction="up" delay={0.3} className="mt-4">
             <p className="text-brand-taupe font-light text-sm md:text-base max-w-md mx-auto">
-              Cada curva da estrada, cada risada mútua e cada obstáculo ultrapassado nos trouxeram até este dia maravilhoso.
+              Aqui eu quis juntar pelomenos um cadin, dos momentos mais marcantes para nós. Espia só.
             </p>
           </AnimatedSection>
         </div>
@@ -41,9 +41,8 @@ export default function TimelineSection() {
               return (
                 <div
                   key={item.id}
-                  className={`relative flex flex-col md:flex-row items-start ${
-                    isEven ? "md:flex-row-reverse" : ""
-                  }`}
+                  className={`relative flex flex-col md:flex-row items-start ${isEven ? "md:flex-row-reverse" : ""
+                    }`}
                 >
                   {/* Spine Icon badge */}
                   <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-5 h-5 bg-brand-rose text-white rounded-full border-4 border-brand-beige shadow-md z-10">
@@ -95,10 +94,10 @@ export default function TimelineSection() {
         {/* Ending Quote Indicator */}
         <AnimatedSection direction="up" className="text-center mt-20">
           <p className="font-serif italic text-brand-rose text-sm md:text-base">
-            "Nossa história tem sido o labirinto mais bonito do meu viver..."
+            "Se o medo está nas nuvens, eu quero estar acima delas, mas só se tiver você"
           </p>
         </AnimatedSection>
-        
+
       </div>
     </section>
   );

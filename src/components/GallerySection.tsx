@@ -79,7 +79,7 @@ export default function GallerySection() {
 
           <AnimatedSection direction="up" delay={0.3} className="mt-4">
             <p className="text-brand-taupe font-light text-xs md:text-sm max-w-md mx-auto">
-              Retratos analógicos de instantes aparentemente bobos, mas que guardam a grandiosidade eterna de estarmos juntos.
+              Aqui eu separei umas fotinhas lindas de momentos só nossos. Se voce clicar em cima das fotos vai abrir uma surpresinha...
             </p>
           </AnimatedSection>
         </div>

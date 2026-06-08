@@ -29,7 +29,7 @@ export default function MemoryCards() {
   return (
     <section id="memories" className="py-24 px-4 bg-brand-beige select-none border-t border-brand-sand/35">
       <div className="max-w-5xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <AnimatedSection direction="down" className="inline-flex items-center gap-1.5 text-brand-rose mb-3">
@@ -46,7 +46,7 @@ export default function MemoryCards() {
 
           <AnimatedSection direction="up" delay={0.3} className="mt-4">
             <p className="text-brand-taupe font-light text-xs md:text-sm max-w-sm mx-auto">
-              Aventuras inesperadas e tempestades superadas que selaram de vez o nosso compromisso eterno.
+              Aqui eu trouxe momentos que eu lembro q foram incriveis e ficaram marcados para nós. Pode até nao ter fotos, mas a gente nao vai esquecer nem a pau
             </p>
           </AnimatedSection>
         </div>
