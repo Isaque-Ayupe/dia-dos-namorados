@@ -3,27 +3,25 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function ThingsAboutYou() {
   const admireList = [
-    "Sua capacidade incrível de iluminar qualquer sala apenas com o som da sua risada.",
-    "A força serena com que você lida com os desafios, sempre mantendo a integridade.",
-    "O brilho entusiasmado que surge nos seus olhos quando você fala de algo que ama de verdade.",
-    "Sua empatia genuína e a maneira linda como acolhe as fraquezas humanas ao seu redor.",
-    "A delicadeza mágica do seu toque, que tem o superpoder de desarmar qualquer cansaço meu."
+    "Sua força de vontade sem igual.",
+    "Sua beleza descomunal que me fazem me apaixonar cada dia mais por você.",
+    "suas piadinhas incriveis que me fazem morrer de rir.",
+    "Sua capacidade de encarar a vida como ela é, e buscar sempre ser melhor.",
+    "Sua capacidade absurda de me acalmar com um simples toque ou palavra."
   ];
 
   const thanksList = [
-    "Existir nesta mesma época e aceitar dividir o seu milagre da vida comigo.",
-    "Cada café preparado com carinho nas manhãs em que a preguiça me dominava.",
-    "Os silêncios doces e confortáveis onde palavras não eram de forma alguma necessárias.",
-    "Sempre me segurar com firmeza quando o mundo lá fora parecia confuso demais.",
-    "Me escolher voluntariamente, com ternura e generosidade, todos os dias."
+    "Por ter ficado comigo quando pensei que o mundo ia desabar.",
+    "Cada cartinha e desenhos absurdos que você faz para mim.",
+    "Pelas noites de filmes que eu chorei muito."
   ];
 
   const lessonsList = [
-    "Que o verdadeiro amor não aperta nem sufoca; ele liberta, acolhe e expande os nossos limites.",
-    "A ver beleza nos imprevistos e encontrar paciência no meio do caos cotidiano.",
-    "A valorizar o eterno 'hoje' em vez de passar semanas ansioso por um futuro abstrato.",
-    "Dizer 'desculpe' com honestidade e abraçar as imperfeições que nos tornam humanos.",
-    "Que dois corações batendo no mesmo compasso conseguem enfrentar qualquer tempestade na vida."
+    "Que um amor não é pesado nem dificil, mas leve e incrivel",
+    "A ver a importancia que nossa aparencia pode ter.",
+    "A me esforçar mais para termor um futuro brilhante!",
+    "Que palavras ditas so por dizer, não valem quanto uma ação de verdade.",
+    "Que juntos somos mais fortes!"
   ];
 
   return (
