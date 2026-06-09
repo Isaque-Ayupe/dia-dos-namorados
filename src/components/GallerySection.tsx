@@ -4,7 +4,7 @@ import { X, MapPin, Calendar, Heart, ZoomIn, ArrowLeft, ArrowRight } from "lucid
 import { galleryData, GalleryItem } from "../data/gallery";
 import AnimatedSection from "./AnimatedSection";
 
-export default function GallerySection() {
+export default function GallerySection({ onModalChange }: { onModalChange?: (isOpen: boolean) => void }) {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
 
@@ -39,11 +39,13 @@ export default function GallerySection() {
   const openItem = (item: GalleryItem, index: number) => {
     setSelectedItem(item);
     setSelectedIndex(index);
+    onModalChange?.(true);
   };
 
   const closeModal = () => {
     setSelectedItem(null);
     setSelectedIndex(-1);
+    onModalChange?.(false);
   };
 
   const navigateNext = () => {

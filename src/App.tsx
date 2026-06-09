@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, useScroll, useSpring } from "motion/react";
 import { Heart, ChevronUp, Sparkles, BookOpen } from "lucide-react";
 
@@ -13,6 +13,8 @@ import RelationshipCounter from "./components/RelationshipCounter";
 import FinalMessage from "./components/FinalMessage";
 import SecretMessages from "./components/SecretMessages";
 import LoginScreen from "./components/LoginScreen";
+import MusicPlayer from "./components/MusicPlayer";
+import MusicPrompt from "./components/MusicPrompt";
 
 export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -24,6 +26,24 @@ export default function App() {
 
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+
+  // Music player state
+  const [musicActive, setMusicActive] = useState(false);
+  const [showMusicPrompt, setShowMusicPrompt] = useState(false);
+  const [isPhotoModalOpen, setIsPhotoModalOpen] = useState(false);
+
+  const handleMusicAccept = useCallback(() => {
+    setMusicActive(true);
+    setShowMusicPrompt(false);
+  }, []);
+
+  const handleMusicDismiss = useCallback(() => {
+    setShowMusicPrompt(false);
+  }, []);
+
+  const handlePhotoModalChange = useCallback((isOpen: boolean) => {
+    setIsPhotoModalOpen(isOpen);
+  }, []);
 
   const handleLoginSuccess = (nickname: string) => {
     localStorage.setItem("couple_story_authenticated", "true");
@@ -150,16 +170,36 @@ export default function App() {
         ))}
       </div>
 
+      {/* Music Prompt Modal */}
+      <MusicPrompt
+        isOpen={showMusicPrompt}
+        onAccept={handleMusicAccept}
+        onDismiss={handleMusicDismiss}
+      />
+
+      {/* Floating Music Player */}
+      <MusicPlayer isActive={musicActive} isModalOpen={isPhotoModalOpen} />
+
       {/* 1. HERO SECTION */}
       <div id="hero">
-        <HeroSection onStartClick={() => scrollToSection("timeline")} userNickname={userNickname} onLogout={handleLogout} />
+        <HeroSection
+          onStartClick={() => {
+            scrollToSection("timeline");
+            // Show music suggestion after a brief delay if not already active
+            if (!musicActive) {
+              setTimeout(() => setShowMusicPrompt(true), 800);
+            }
+          }}
+          userNickname={userNickname}
+          onLogout={handleLogout}
+        />
       </div>
 
       {/* 2. NOSSA LINHA DO TEMPO */}
       <TimelineSection />
 
       {/* 3. GALERIA DE MEMÓRIAS */}
-      <GallerySection />
+      <GallerySection onModalChange={handlePhotoModalChange} />
 
       {/* 4. MOMENTOS QUE MARCARAM */}
       <MemoryCards />

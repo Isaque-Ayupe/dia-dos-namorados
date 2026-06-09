@@ -62,7 +62,7 @@ export default function TimelineSection() {
                       </div>
 
                       {/* Image container with elegant zooming */}
-                      <div className="relative overflow-hidden rounded-xl aspect-[16/10] mb-4 bg-brand-darkbeige shadow-sm border border-brand-sand/20">
+                      <div className="relative overflow-hidden rounded-xl aspect-[16/14] mb-4 bg-brand-darkbeige shadow-sm border border-brand-sand/20">
                         <img
                           src={item.image}
                           alt={item.title}

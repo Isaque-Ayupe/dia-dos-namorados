@@ -1,5 +1,7 @@
 import { motion } from "motion/react";
 import { Heart, Sparkles, ChevronDown } from "lucide-react";
+import heroImage from "../public/Foto_favorita_minha.jpeg";
+
 
 interface HeroSectionProps {
   onStartClick: () => void;
@@ -62,7 +64,7 @@ export default function HeroSection({ onStartClick, userNickname, onLogout }: He
         >
           <div className="absolute inset-0 border border-brand-rose/20 rounded-2xl m-5 pointer-events-none z-10" />
           <img
-            src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200&auto=format&fit=crop"
+            src={heroImage}
             alt="Nosso Amor"
             className="w-full h-full object-cover rounded-xl grayscale-[15%] brightness-[97%] contrast-[102%]"
             referrerPolicy="no-referrer"
