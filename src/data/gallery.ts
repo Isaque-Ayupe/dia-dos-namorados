@@ -1,3 +1,10 @@
+import fofo_fofa from "../public/fofo_fofa.jpeg"
+import dia_do_shopping from "../public/dia_do_shopping.jpeg"
+import foto_espelho from "../public/foto_espelho.jpeg"
+import foto_favorita from "../public/Foto_favorita.jpeg"
+import foto_incrivel from "../public/foto_incrivel.jpeg"
+import treinos from "../public/treinos.jpeg"
+
 export interface GalleryItem {
   id: string;
   image: string;
@@ -11,56 +18,56 @@ export interface GalleryItem {
 export const galleryData: GalleryItem[] = [
   {
     id: "g1",
-    image: "https://images.unsplash.com/photo-1464746133101-a2c3f88e0dd9?q=80&w=800&auto=format&fit=crop",
-    title: "Olhando o Infinito Conectados",
-    location: "Mirante da Montanha",
-    date: "Julho de 2024",
-    description: "Sentados no capô do carro, as luzes da cidade cintilando ao fundo como estrelas caídas. O vento estava gelado, mas o calor do seu abraço aquecia minha alma por inteiro.",
+    image: fofo_fofa,
+    title: "Fazendo mascara juntos",
+    location: "Sua House",
+    date: "Julho de 2025",
+    description: "Juntos, fazendo mascara e tirando foto fazendo gracinha, cuidando da pele kkkkk. Não sei por que esse dia pra mim foi MUITO LEGAL.",
     aspectRatio: "aspect-[3/4]"
   },
   {
     id: "g2",
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop",
+    image: dia_do_shopping,
     title: "Noite de Risadas e Pizza",
-    location: "Nossa Cozinha",
-    date: "Agosto de 2024",
-    description: "Farinha por todo lado, uma receita que falhou de forma hilária e nós rindo tanto que a barriga doía. É no caos do comum que descobrimos a perfeição da nossa parceria.",
+    location: "Dia do shopping",
+    date: "Agosto de 2025",
+    description: "Em um domingo qualquer a gente decidiu ir no shopping, e foi EXCELENTE. A gente comeu mania de churrasco e descobriu aquele milkshake de pistache incrivel! Aquele dia foi ótimo!",
     aspectRatio: "aspect-square"
   },
   {
     id: "g3",
-    image: "https://images.unsplash.com/photo-1537655780520-1e392edd816a?q=80&w=800&auto=format&fit=crop",
-    title: "Chuva Inesperada",
-    location: "Parque da Cidade",
-    date: "Outubro de 2024",
-    description: "O piquenique foi interrompido por um temporal repentino. Corremos de mãos dadas, ensopados e gargalhando, nos abrigando embaixo de uma árvore antiga. Momentos imperfeitos criam as melhores memórias.",
+    image: foto_espelho,
+    title: "Essa foto",
+    location: "sua House",
+    date: "Dezembro de 2025",
+    description: "Não lembro muito bem desse dia, mas lembro dessa foto, e por algum motivo, eu amo ela. Sinto q de alguma forma ela representa nosso relacionamento sabe?",
     aspectRatio: "aspect-[4/3]"
   },
   {
     id: "g4",
-    image: "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=800&auto=format&fit=crop",
-    title: "Pôr do Sol Dourado",
-    location: "À Beira-Mar",
-    date: "Janeiro de 2025",
-    description: "O céu tingido de tons terracota, rosa e violeta. Você estava sorrindo distraído(a), e eu bati essa foto pensando no quanto sou afortunado(a) por viver a vida na mesma sintonia que você.",
+    image: foto_favorita,
+    title: "Nosso 1 ano",
+    location: "Casa São Paulo",
+    date: "Janeiro de 2026",
+    description: "Apesar dos pesares, olha essa foto tipo QUE LINDA AMOOO. Eu gosto demais dela KKKKK. Eu tenho lembranças mt boas desse dia, e do que nosso relacionamento significa pra eu. Já disse que te amo hoje? Por que eu te amo muito viuu.",
     aspectRatio: "aspect-[3/4]"
   },
   {
     id: "g5",
-    image: "https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=800&auto=format&fit=crop",
-    title: "Café de Domingo Confortável",
-    location: "Nossa Sala",
-    date: "Março de 2025",
-    description: "A preguiça doce de um domingo chuvoso, pés entrelaçados sob a coberta macia e o barulho de gotas na janela. Se o aconchego tivesse uma imagem oficial, seria exatamente este instante.",
+    image: foto_incrivel,
+    title: "Candle Light",
+    location: "Candle Light",
+    date: "Agosto de 2025",
+    description: "Showzinho simplesmente épico, comigo cantando junto com os violino KKKKKK. Esse dia foi simplesmente perfeito. A gente tava super chique ouvindo um quarteto de cordas meoorrr. Sensacional!",
     aspectRatio: "aspect-square"
   },
   {
     id: "g6",
-    image: "https://images.unsplash.com/photo-1507504038482-762100626643?q=80&w=800&auto=format&fit=crop",
-    title: "Caminhada Iluminada",
-    location: "Centro Histórico",
-    date: "Maio de 2025",
-    description: "A beleza crua do entardecer refletindo nas ruas de paralelepípedo. Caminhar ao seu lado é ver encanto nas menores frestas e nas esquinas mais discretas da cidade.",
+    image: treinos,
+    title: "Nossos treinos",
+    location: "Academias",
+    date: "Desde a primeira vez",
+    description: "Eu usei essa foto pra falar dos nosso treinos no geral. Essa é minha foto favorita de nós na academia. E não da pra negar que academia faz parte da nossa história, até por que a gnt começou a se conhecer em uma academia né KKKKK.",
     aspectRatio: "aspect-[4/3]"
   }
 ];
