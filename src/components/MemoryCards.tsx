@@ -46,7 +46,7 @@ export default function MemoryCards() {
 
           <AnimatedSection direction="up" delay={0.3} className="mt-4">
             <p className="text-brand-taupe font-light text-xs md:text-sm max-w-sm mx-auto">
-              Aqui eu trouxe momentos que eu lembro q foram incriveis e ficaram marcados para nós. Pode até nao ter fotos, mas a gente nao vai esquecer nem a pau
+              Aqui eu trouxe momentos que eu lembro q foram incriveis e ficaram marcados para nós.
             </p>
           </AnimatedSection>
         </div>
