@@ -112,7 +112,7 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="w-[320px] max-[768px]:w-[300px] bg-white/75 backdrop-blur-2xl border border-white/40 rounded-2xl shadow-2xl shadow-brand-charcoal/8 overflow-hidden"
+            className="w-[340px] max-[768px]:w-[310px] bg-white/75 backdrop-blur-2xl border border-white/40 rounded-2xl shadow-2xl shadow-brand-charcoal/8 overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between px-4 pt-4 pb-2">
@@ -162,7 +162,7 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
               <iframe
                 src={musicConfig.spotifyEmbedUrl}
                 width="100%"
-                height="152"
+                height="352"
                 frameBorder={0}
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
