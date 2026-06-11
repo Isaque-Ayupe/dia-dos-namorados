@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 export default function FinalMessage() {
-  const currentDateFormatted = "8 de Junho de 2026";
+  const currentDateFormatted = "12 de Junho de 2026";
 
   return (
     <section id="final-message" className="min-h-[80vh] flex flex-col justify-center items-center px-4 bg-gradient-to-b from-brand-beige to-[#FFFDFB] select-none text-center relative overflow-hidden border-t border-brand-sand/35">

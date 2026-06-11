@@ -34,7 +34,7 @@ export default function MemoryCards() {
         <div className="text-center mb-16">
           <AnimatedSection direction="down" className="inline-flex items-center gap-1.5 text-brand-rose mb-3">
             <LucideIcons.Sparkles size={14} />
-            <span className="font-serif italic text-sm">Instantes Emblemáticos</span>
+            <span className="font-serif italic text-sm">Mais estrelinhas kkkkk</span>
           </AnimatedSection>
 
           <AnimatedSection direction="up" delay={0.2}>
@@ -119,7 +119,7 @@ export default function MemoryCards() {
               className="relative w-full max-w-2xl bg-[#FFFDFB] rounded-2xl md:rounded-3xl shadow-xl border border-white/15 overflow-hidden z-40 max-h-[90vh] flex flex-col"
             >
               {/* Header Image banner */}
-              <div className="relative h-44 sm:h-56 bg-brand-charcoal">
+              <div className="relative h-60 sm:h-100 bg-brand-charcoal">
                 <img
                   src={activeCard.image}
                   alt={activeCard.title}

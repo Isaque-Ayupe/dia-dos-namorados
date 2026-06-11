@@ -45,7 +45,7 @@ export default function DreamsSection() {
   return (
     <section id="dreams" className="py-24 px-4 bg-brand-beige select-none relative border-t border-brand-sand/35">
       <div className="max-w-4xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <AnimatedSection direction="down" className="inline-flex items-center gap-1.5 text-brand-rose mb-3">
@@ -62,7 +62,7 @@ export default function DreamsSection() {
 
           <AnimatedSection direction="up" delay={0.3} className="mt-4">
             <p className="text-brand-taupe font-light text-xs md:text-sm max-w-sm mx-auto">
-              Nossa lista secreta de metas, desejos bobos e planos repletos de certezas de conquistas futuras.
+              Nossa lista de metas, sonhos e planos que ja conquistamos ou queremos conquistar
             </p>
           </AnimatedSection>
         </div>
@@ -102,11 +102,10 @@ export default function DreamsSection() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-serif transition-all cursor-pointer font-semibold ${
-                filter === cat
+              className={`px-4 py-1.5 rounded-full text-xs font-serif transition-all cursor-pointer font-semibold ${filter === cat
                   ? "bg-brand-rose text-white shadow-md shadow-brand-rose/10"
                   : "bg-white text-brand-[#5E5852] border border-brand-sand/40 hover:bg-neutral-50/50"
-              }`}
+                }`}
             >
               {cat === "all" ? "Ver todos" : cat}
             </button>
@@ -125,11 +124,10 @@ export default function DreamsSection() {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => toggleDream(dream.id, dream.defaultChecked)}
-                className={`group flex items-start gap-4 p-5 rounded-2xl border text-left cursor-pointer transition-all ${
-                  dream.defaultChecked
+                className={`group flex items-start gap-4 p-5 rounded-2xl border text-left cursor-pointer transition-all ${dream.defaultChecked
                     ? "bg-white/[0.60] border-brand-sand/20 text-stone-400"
                     : "bg-white border-brand-sand/40 hover:border-brand-rose/30 hover:shadow-xs text-brand-charcoal"
-                }`}
+                  }`}
               >
                 {/* Checkbox item */}
                 <div className="mt-0.5 flex-shrink-0">
@@ -150,26 +148,23 @@ export default function DreamsSection() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
                     <h4
-                      className={`font-serif text-sm sm:text-base leading-snug transition-all ${
-                        dream.defaultChecked ? "line-through text-stone-400/80 font-light" : "text-brand-charcoal"
-                      }`}
+                      className={`font-serif text-sm sm:text-base leading-snug transition-all ${dream.defaultChecked ? "line-through text-stone-400/80 font-light" : "text-brand-charcoal"
+                        }`}
                     >
                       {dream.title}
                     </h4>
                     <span
-                      className={`text-[9px] uppercase font-mono px-2 py-0.5 rounded-md font-semibold ${
-                        dream.defaultChecked
+                      className={`text-[9px] uppercase font-mono px-2 py-0.5 rounded-md font-semibold ${dream.defaultChecked
                           ? "bg-stone-100 text-stone-400"
                           : "bg-brand-darkbeige text-[#B76E79]"
-                      }`}
+                        }`}
                     >
                       {dream.category}
                     </span>
                   </div>
                   <p
-                    className={`text-xs ml-0 mt-1 sm:mt-1.5 leading-relaxed font-light ${
-                      dream.defaultChecked ? "text-stone-400/60" : "text-brand-taupe"
-                    }`}
+                    className={`text-xs ml-0 mt-1 sm:mt-1.5 leading-relaxed font-light ${dream.defaultChecked ? "text-stone-400/60" : "text-brand-taupe"
+                      }`}
                   >
                     {dream.description}
                   </p>

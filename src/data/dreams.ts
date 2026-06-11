@@ -9,51 +9,44 @@ export interface Dream {
 export const dreamsData: Dream[] = [
   {
     id: "d1",
-    title: "Conhecer a Itália de trem",
-    description: "Caminhar pelas ruelas históricas, comer massas maravilhosas e tomar sorvete em Florença de mãos dadas.",
+    title: "Ir para Europa",
+    description: "Conhecer a torre eifel, o coliseu, e a grécia de mãos dadas, tirando muitas fotos e saindo bem romanticus. kkkk",
     defaultChecked: false,
     category: "Viagem"
   },
   {
     id: "d2",
-    title: "Montar a nossa parede de fotos física",
-    description: "Imprimir as fotos polaroides mais bonitas e espalhá-las pela casa inteira junto com ingressos de shows e bilhetinhos.",
-    defaultChecked: true,
-    category: "Cotidiano"
-  },
-  {
-    id: "d3",
-    title: "Adotar um bichinho de estimação juntos",
-    description: "Dar um lar para um cachorro ou gatinho abandonado e passar horas escolhendo um nome absurdamente fofo ou engraçado.",
+    title: "Comprar nossa casa",
+    description: "Ter o lugar pra chamar de nosso, com a nossa cara",
     defaultChecked: false,
     category: "Futuro"
   },
   {
-    id: "d4",
-    title: "Maratona completa de filmes em um dia de chuva",
-    description: "Preparar baldes gigantescos de pipoca, vestir os pijamas mais confortáveis e não colocar o pé para fora de casa por 24 horas inteiras.",
+    id: "d3",
+    title: "Frolis",
+    description: "Ganhar frolis...",
     defaultChecked: true,
-    category: "Divertido"
+    category: "Cotidiano"
+  },
+  {
+    id: "d4",
+    title: "Cantar juntos",
+    description: "Sim, isso era um sonho meu, e a gente realizou e de verdade, amo cantar com você",
+    defaultChecked: true,
+    category: "Cotidiano"
   },
   {
     id: "d5",
-    title: "Morar num cantinho com jardim ou varanda ensolarada",
-    description: "Para tomarmos o café da manhã de domingo juntos, rodeados de plantinhas cuidadas por nós dois enquanto o sol mansa entra pelas janelas.",
+    title: "Casar",
+    description: "Nao tem como ne, nosso maior sonho é Casarrrrrrr.",
     defaultChecked: false,
     category: "Futuro"
   },
   {
     id: "d6",
-    title: "Ver o nascer do sol no topo de uma montanha",
-    description: "Acampar sobre as nuvens, preparar o café numa caneca de alumínio e ver as luzes douradas pintando um novo dia juntos.",
+    title: "Ir em um parque de pula pula e num karaoke",
+    description: "Vai por mim, eu sonho com isso por que acho que a gente vai se divertir demais kkkkkkkkk",
     defaultChecked: false,
-    category: "Aventura"
-  },
-  {
-    id: "d7",
-    title: "Continuar mandando memes imbecis e rindo até nascer rugas",
-    description: "Mesmo velhinhos, trocando piadas internas no sofá e cuidando um do outro com a mesma leveza de quem acabou de se apaixonar.",
-    defaultChecked: true,
     category: "Divertido"
   }
 ];

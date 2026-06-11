@@ -134,7 +134,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen text-brand-charcoal bg-brand-beige antialiased font-sans">
-      
+
       {/* Top Premium Thin Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-sand via-brand-rose to-brand-charcoal z-50 transform origin-left"
@@ -156,11 +156,10 @@ export default function App() {
           >
             {/* Dot tracker indicator */}
             <div
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                activeSection === item.id
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === item.id
                   ? "bg-brand-rose scale-125 shadow-xs"
                   : "bg-brand-sand group-hover:bg-brand-rose/60"
-              }`}
+                }`}
             />
             {/* Pop label on hover */}
             <span className="absolute right-6 scale-0 group-hover:scale-100 transition-all duration-200 bg-brand-charcoal text-white text-[10px] uppercase font-mono tracking-wider py-1 px-2.5 rounded-lg whitespace-nowrap shadow-md pointer-events-none origin-right font-semibold">

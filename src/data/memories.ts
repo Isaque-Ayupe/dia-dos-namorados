@@ -1,3 +1,8 @@
+import oscar from "../public/oscar.jpeg"
+import parque from "../public/pedido_pai.jpeg"
+import suaFamilia from "../public/Sua_familia.jpeg"
+import treinos from "../public/treinosdnv.jpeg"
+
 export interface MemoryCard {
   id: string;
   category: string;
@@ -12,42 +17,42 @@ export interface MemoryCard {
 export const memoriesData: MemoryCard[] = [
   {
     id: "m1",
-    category: "Viagem Insólita",
-    title: "A Nossa Primeira Grande Viagem Juntos",
-    shortDescription: "Com direito a malas trocadas, passagens quase perdidas e o pôr do sol mais inacreditável que já vimos.",
-    fullStory: "Parecia que tudo daria errado naquele dia: nosso voo atrasou duas horas, o pneu do carro alugado deu problema logo na saída e as nossas malas foram parar na esteira oposta. No entanto, quando finalmente chegamos ao chalé no topo da colina, cansados e famintos, fomos recebidos por uma lareira crepitante e um céu tão estrelado que parecia pintura.\n\nSentamos no chão, abrimos um vinho simples e dividimos um pacote de salgadinhos rindo de toda a saga. Ali soube que, não importa o destino ou os imprevistos da jornada, ao seu lado qualquer desvio vira uma grande aventura inesquecível.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop",
+    category: "Natal",
+    title: "Época de Natal",
+    shortDescription: "Como você magicamente me fez ligar MUITO pra essa data.",
+    fullStory: "Nessa época a gente não era namorido ainda, mas eu lembro que você se mostrou MUITO apaixonada pelo natal, e sendo bem sincero eu tinha perdido qualquer magia por esta data.\n\n Mas depois que a gente foi no Oscar Nymeyer, Amor, Eu me apaixonei por essa época. Toda a ideia de troca presentes e estar com a família, me encantou. E eu trago esses momentos de Natal, no geral, com muito carinho mesmo, por hoje eu possio dizer que é minha época preferida do ano!!",
+    image: oscar,
     icon: "Compass",
-    date: "Julho de 2024"
+    date: "Dezembro"
   },
   {
     id: "m2",
-    category: "Superação",
-    title: "O Dia em que Seguramos Firme a Mão um do Outro",
-    shortDescription: "Quando os dias difíceis bateram na nossa porta e percebemos que éramos mais do que apenas namorados: éramos um abrigo seguro.",
-    fullStory: "A vida não é feita só de jantares românticos e dias ensolarados. Quando aquele desafio profissional gigante e a saúde delicada de um de nós se misturaram, o medo tentou se instalar. Mas em momento nenhum nos soltamos.\n\nLembro-me perfeitamente de você preparando aquele chá quente tarde da noite, sussurrando que tudo ficaria bem, e do abraço apertado de silêncios compartilhados. Nós não apenas superamos aquela tempestade, mas saímos dela estruturados sob alicerces inabaláveis. Aprendi que amar é ser calmaria em meio ao caos.",
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=800&auto=format&fit=crop",
+    category: "Parque",
+    title: "Nossas idas ao Parque",
+    shortDescription: "O quanto nossas idas a natureza são importantes",
+    fullStory: "Como foto eu coloquei o dia que eu pedi em você em namoro pro seu pai kkkkkk. Esse dia foi muito engraçado por que apesar de eu estar me preparando a muito tempo para este dia, voce me pegou desprevenido KKKKK. Mas eu queria falar, no geral, o quanto esse parque é importante para nós kkkkkk. \n\n A gente Já passou por tanta coisa lá, discussoes, choros confusos KKKKK, musicas e conversas, corridas e tudo mais. Nao da pra pensar na gente e nao lembrar desse parque. \n\n E eu amo isso demais. Amo cada tarde que passamos ali e vou guardar sempre pq isso é extremamente importante para eu.",
+    image: parque,
     icon: "HeartHandshake",
-    date: "Novembro de 2024"
+    date: "Sempre"
   },
   {
     id: "m3",
-    category: "Cumplicidade Romântica",
-    title: "O Primeiro Aniversário Juntos",
-    shortDescription: "Uma comemoração que fugiu dos clichês comerciais para focar no que realmente importa: nós dois.",
-    fullStory: "Em vez de reservas em restaurantes caros e barulhentos, escolhemos transformar nossa sala em um refúgio exclusivo: espalhamos almofadas pelo carpete, estendemos luzes natalinas e criamos um menu todo nosso, com base em massas e sobremesas deliciosas feitas a quatro mãos.\n\nTrocamos cartas escritas à mão que guardavam as palavras mais sinceras que já ouvimos um do outro. Vimos o tempo passar sem pressa, sem distrações. Foi o aniversário mais simples e, sem dúvidas, o mais inesquecível de todos.",
-    image: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=800&auto=format&fit=crop",
-    icon: "Sparkles",
-    date: "Outubro de 2024"
+    category: "Família",
+    title: "Momentos em famiília",
+    shortDescription: "O quanto os momentos em família são importantes para mim",
+    fullStory: "Separei esse aqui para lembrar o quanto os momentos com sua familia se tornaram especiais. No momento que minha familia estava se despedaçando, eu me senti muito, MUITO MESMO acolhido por sua familia e isso foi extremamente importante para mim meu amo. \n\n Esse dia ai, é uma prova que quando a gente junta, sai umas risada mt boa e eu amo isso kkkkkkkk. Obrigado por me tratar como parte da sua família meu amor.",
+    image: suaFamilia,
+    icon: "HeartHandshake",
+    date: "Sempre"
   },
   {
     id: "m4",
-    category: "Diversão e Sintonia",
-    title: "A Tarde do Karaokê Improvisado",
-    shortDescription: "Descobrindo que nossa sintonia fina funciona até quando desafinamos lindamente cantando clássicos.",
-    fullStory: "Uma tarde chuvosa sem nada planejado na agenda. De repente, uma escova de cabelo virou microfone e a TV da sala virou o palco central do maior show de rock brega já visto. Cantamos de Sandy & Junior a clássicos italianos dramáticos, fazendo coreografias espalhafatosas no sofá.\n\nVer você se entregar ao ridículo com tanta leveza e rir até chorar comigo me lembrou do porquê eu te amo tanto: a nossa maturidade é linda, mas a nossa habilidade de sermos crianças juntos é sagrada.",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd6a?q=80&w=800&auto=format&fit=crop",
+    category: "Academia",
+    title: "Academia é nossa historia",
+    shortDescription: "O quanto a academia está envolvida em quem a gente é e como viramos quem somos.",
+    fullStory: "Nossa primeira vez se vendo nao podia ser em outro lugar né KKKKK. Treinando e brigando KKKKKKK. Mas nao da pra negar que a academia é simplesmente parte de nós e do nosso relacionamento. \n\n E eu levo isso com muito carinho comigo, e acho que os momentos que temos juntos treinando são simplesmente um dos melhores. É algo que eu quero compartilhar com voce todos os dias quando a gente casar ta?",
+    image: treinos,
     icon: "Mic",
-    date: "Janeiro de 2025"
+    date: "Outubro de 2025"
   }
 ];
