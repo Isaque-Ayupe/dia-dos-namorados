@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Heart, Sparkles, ChevronDown } from "lucide-react";
-import heroImage from "../public/Foto_favorita_minha.jpeg";
+import heroImage from "../assets/Foto_favorita_minha.jpeg";
 
 
 interface HeroSectionProps {

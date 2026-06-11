@@ -1,8 +1,8 @@
-import primeiravez from "../public/primeiravez.jpeg";
-import primeira_saida from "../public/primeira_saida.jpeg";
-import pedido_namoro from "../public/pedido.jpeg";
-import primeiro_dia12 from "../public/primeiro_dia12.jpeg";
-import aniversario_ana from "../public/aniversaro_ana.jpeg";
+import primeiravez from "../assets/primeiravez.jpeg";
+import primeira_saida from "../assets/primeira_saida.jpeg";
+import pedido_namoro from "../assets/pedido.jpeg";
+import primeiro_dia12 from "../assets/primeiro_dia12.jpeg";
+import aniversario_ana from "../assets/aniversaro_ana.jpeg";
 
 
 

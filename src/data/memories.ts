@@ -1,7 +1,7 @@
-import oscar from "../public/oscar.jpeg"
-import parque from "../public/pedido_pai.jpeg"
-import suaFamilia from "../public/Sua_familia.jpeg"
-import treinos from "../public/treinosdnv.jpeg"
+import oscar from "../assets/oscar.jpeg"
+import parque from "../assets/pedido_pai.jpeg"
+import suaFamilia from "../assets/Sua_familia.jpeg"
+import treinos from "../assets/treinosdnv.jpeg"
 
 export interface MemoryCard {
   id: string;
