@@ -1,9 +1,9 @@
 import fofo_fofa from "../assets/fofo_fofa.jpeg"
 import dia_do_shopping from "../assets/dia_do_shopping.jpeg"
-import foto_espelho from "../assets/foto_espelho.jpeg"
+import foto_espelho from "../assets/foto_Espelho.jpeg"
 import foto_favorita from "../assets/Foto_favorita.jpeg"
 import foto_incrivel from "../assets/foto_incrivel.jpeg"
-import treinos from "../assets/treinos.jpeg"
+import treinos from "../assets/Treinos.jpeg"
 
 export interface GalleryItem {
   id: string;
