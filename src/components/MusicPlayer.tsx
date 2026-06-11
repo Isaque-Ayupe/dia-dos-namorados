@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Music, Minus, X } from "lucide-react";
+import { Music, Minus, X, Play, Pause, Volume2, VolumeX } from "lucide-react";
 import { musicConfig } from "../config/music";
 
 type PlayerState = "closed" | "expanded" | "minimized";
@@ -13,11 +13,47 @@ interface MusicPlayerProps {
 export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps) {
   const [playerState, setPlayerState] = useState<PlayerState>("closed");
   const [previousState, setPreviousState] = useState<PlayerState>("closed");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Show the player in "closed" state once activated
+  // Create and configure audio element once
+  useEffect(() => {
+    const audio = new Audio(musicConfig.audioSrc);
+    audio.loop = true;
+    audio.volume = 0.4;
+    audio.preload = "auto";
+    audioRef.current = audio;
+
+    const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
+    const handleLoadedMetadata = () => setDuration(audio.duration);
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener("loadedmetadata", handleLoadedMetadata);
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
+
+    return () => {
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+      audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
+      audio.pause();
+      audio.src = "";
+    };
+  }, []);
+
+  // Auto-play when isActive becomes true
   useEffect(() => {
     if (isActive && playerState === "closed") {
       setPlayerState("expanded");
+      audioRef.current?.play().catch(() => {
+        // Browser blocked autoplay; user will need to click play
+      });
     }
   }, [isActive]);
 
@@ -34,6 +70,37 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
     }
   }, [isModalOpen]);
 
+  const togglePlay = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  }, []);
+
+  const toggleMute = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.muted = !audio.muted;
+    setIsMuted(audio.muted);
+  }, []);
+
+  const handleSeek = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const audio = audioRef.current;
+    if (!audio || !duration) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    audio.currentTime = ratio * duration;
+  }, [duration]);
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60);
+    const s = Math.floor(seconds % 60);
+    return `${m}:${s.toString().padStart(2, "0")}`;
+  };
+
   if (!isActive) return null;
 
   const handleToggle = () => {
@@ -48,7 +115,11 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
 
   const handleClose = () => {
     setPlayerState("closed");
+    // Pause audio when closing the player UI (music continues in background? No, pause it.)
+    audioRef.current?.pause();
   };
+
+  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
     <div
@@ -64,7 +135,10 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            onClick={handleToggle}
+            onClick={() => {
+              handleToggle();
+              audioRef.current?.play().catch(() => {});
+            }}
             className="group flex items-center gap-2.5 px-5 py-3 bg-white/70 backdrop-blur-xl border border-white/40 rounded-full shadow-xl shadow-brand-charcoal/5 cursor-pointer hover:bg-white/85 hover:shadow-2xl transition-all duration-300"
           >
             <motion.span
@@ -99,7 +173,7 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
               <Music size={14} />
             </motion.span>
             <span className="font-serif text-[11px] text-brand-charcoal italic tracking-wide hidden sm:inline">
-              Nossa Música
+              {isPlaying ? "Tocando..." : "Nossa Música"}
             </span>
           </motion.button>
         )}
@@ -157,24 +231,58 @@ export default function MusicPlayer({ isActive, isModalOpen }: MusicPlayerProps)
             {/* Subtle divider */}
             <div className="mx-4 h-[1px] bg-brand-sand/30" />
 
-            {/* Spotify Embed */}
-            <div className="p-3">
-              <iframe
-                src={musicConfig.spotifyEmbedUrl}
-                width="100%"
-                height="352"
-                frameBorder={0}
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                title={`${musicConfig.trackName} — ${musicConfig.artistName}`}
-                className="rounded-xl"
-                style={{ borderRadius: "12px" }}
-              />
+            {/* Audio Player Controls */}
+            <div className="p-4 flex flex-col gap-3">
+              {/* Play/Pause + Mute Row */}
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={togglePlay}
+                  className="w-10 h-10 flex items-center justify-center bg-brand-charcoal hover:bg-brand-charcoal/85 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95"
+                  title={isPlaying ? "Pausar" : "Tocar"}
+                >
+                  {isPlaying ? <Pause size={16} /> : <Play size={16} className="ml-0.5" />}
+                </button>
+
+                {/* Progress bar */}
+                <div className="flex-1 flex flex-col gap-1">
+                  <div
+                    className="relative w-full h-1.5 bg-brand-sand/40 rounded-full cursor-pointer group"
+                    onClick={handleSeek}
+                  >
+                    <div
+                      className="absolute left-0 top-0 h-full bg-gradient-to-r from-brand-rose to-brand-terracotta rounded-full transition-all duration-150"
+                      style={{ width: `${progress}%` }}
+                    />
+                    {/* Hover knob */}
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white border-2 border-brand-rose rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity"
+                      style={{ left: `calc(${progress}% - 6px)` }}
+                    />
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-mono text-[9px] text-brand-taupe/60">
+                      {formatTime(currentTime)}
+                    </span>
+                    <span className="font-mono text-[9px] text-brand-taupe/60">
+                      {formatTime(duration)}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Mute button */}
+                <button
+                  onClick={toggleMute}
+                  className="p-1.5 text-brand-taupe/60 hover:text-brand-charcoal hover:bg-brand-darkbeige rounded-lg transition-all duration-200 cursor-pointer"
+                  title={isMuted ? "Ativar som" : "Silenciar"}
+                >
+                  {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+                </button>
+              </div>
             </div>
 
             {/* Bottom label */}
             <div className="px-4 pb-3 flex items-center justify-center gap-1.5">
-              <div className="w-1.5 h-1.5 bg-brand-rose/60 rounded-full animate-pulse" />
+              <div className={`w-1.5 h-1.5 rounded-full ${isPlaying ? "bg-brand-rose/60 animate-pulse" : "bg-brand-taupe/30"}`} />
               <span className="font-mono text-[9px] text-brand-taupe/70 uppercase tracking-widest">
                 Trilha sonora da nossa história
               </span>
