@@ -107,7 +107,7 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         {/* Informative Phrase Match */}
         <div className="bg-brand-darkbeige/30 border border-brand-sand/30 p-4 rounded-2xl mb-6 text-center">
           <p className="text-brand-taupe text-xs leading-relaxed font-sans font-light">
-            Para logar, digite nosso <span className="font-semibold text-brand-charcoal">apelido de casal</span> e a <span className="font-semibold text-brand-charcoal">senha</span> <span className="text-[11px] block mt-1 italic text-[#B76E79] font-medium">(dica: a senha é o dia que eu te mandei mensagem a primeira vez, sendo este dia: 10/10/2024)</span>
+            Para logar, digite nosso <span className="font-semibold text-brand-charcoal">apelido de casal</span> e a <span className="font-semibold text-brand-charcoal">senha</span> <span className="text-[11px] block mt-1 italic text-[#B76E79] font-medium">(dica: a senha é o dia que eu te mandei mensagem a primeira vez)</span>
           </p>
         </div>
 
